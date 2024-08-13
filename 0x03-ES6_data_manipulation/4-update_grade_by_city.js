@@ -3,13 +3,13 @@ export default function updateStudentGradeByCity(array, city, newGrades) {
 
   return filter_byCity.map((value) => {
     const studentGrade = newGrades.find(
-      (grade) => grade.studentId === value.id
+      (grade) => grade.studentId === value.id,
     );
 
     if (studentGrade) {
       value.grade = studentGrade.grade;
     } else {
-      value.grade = "N/A";
+      value.grade = 'N/A';
     }
 
     return value;
